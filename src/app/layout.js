@@ -25,10 +25,10 @@ export default function RootLayout({ children }) {
                       <a href="/about">About</a>
                     </li>
                     <li>
-                      <a href="/contact">Contact</a>
+                      <a href="/work">Work</a>
                     </li>
                     <li>
-                      <a href="/work">Work</a>
+                      <a href="/contact">Contact</a>
                     </li>
                   </ul>
                 </div>
@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
             </div>
           </nav>
         </header>
-        <main className="max-w-5xl mx-auto px-6 md:px-12 xl:px-6">
+        <main className="max-w-5xl mx-auto px-6 md:px-12 xl:px-6 mt-12">
           {children}
         </main>
       </body>
