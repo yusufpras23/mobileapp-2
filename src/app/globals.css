@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.my-input-text{
+.my-input-text {
   @apply p-2 border rounded-md bg-gray-100 focus:bg-white;
 }
 
-body{
-  @apply bg-gray-100;
+body {
+  @apply bg-yellow-100;
 }
 
 :root {
