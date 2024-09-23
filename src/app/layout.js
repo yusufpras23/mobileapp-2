@@ -12,15 +12,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="py-2 bg-white">
+        <header className="py-2 bg-black">
           <nav className="w-full">
             <div className="max-w-5xl mx-auto px-6 md:px-12 xl:px-6">
               <div className="flex flex-wrap items-center justify-between">
-                <div>
-                  <a href="/">LOGO</a>
+                <div className="text-white text-5xl py-2">
+                  <a href="/">ysf. </a>
                 </div>
                 <div>
-                  <ul className="flex flex-row gap-6">
+                  <ul className="flex flex-row gap-6 text-white text-base">
                     <li>
                       <a href="/about">About</a>
                     </li>
