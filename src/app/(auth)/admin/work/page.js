@@ -1,6 +1,7 @@
 "use client"
 import { useState } from 'react';
 import Card from '../../../../components/card';
+import WorkList from './component/work-list'
 
 export default function AdminWork() {
   const [data, setData] = useState({
@@ -43,7 +44,19 @@ export default function AdminWork() {
       console.error("ERR", err.message)
       alert(err.message)
     }
-}
+  }
+
+  const onEditItem = async (id)=>{
+    const response = await fetch(`/api/work/${id}`);
+    let resData = await response.json();
+    console.log('resData', resData)
+    setData({
+      ...data,
+      id: resData.data[0].id,
+      title:resData.data[0].title 
+      //lanjutkan
+    })
+  }
 
 
   return (<>
@@ -123,7 +136,7 @@ export default function AdminWork() {
       </Card>
       
       <Card title="List of Work" style="mt-5">
-        asdf
+        <WorkList onEditItem={(val)=>onEditItem(val)}/>
       </Card>
     </>
   );
